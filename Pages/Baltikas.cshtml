@@ -1,0 +1,28 @@
+﻿@page
+@model WebApplication1.Pages.BaltikasModel
+@{
+}
+
+<h1>Страница Пользователи</h1>
+<a asp-page="EditBeer" class="btn btn-primary stretched-link">Создать</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Color</th>
+            <th>Structure</th>
+            <th>Volume</th>
+        </tr>
+    <thead>
+    <tbody>
+                @foreach (var Baltika in Model.Baltikas)
+                {
+            <tr>
+                <td><a href="EditBaltika?id=" +@Baltika.Id>@Baltika.Id</a></td>
+                <td>@Baltika.Color</td>
+                <td>@Baltika.Structure</td>
+                <td>@Baltika.Volume</td>
+            </tr>
+                }
+    </tbody>
+</table>

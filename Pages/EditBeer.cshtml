@@ -1,0 +1,16 @@
+﻿@page
+@model WebApplication1.Pages.EditBeerModel;
+@{
+}
+<form method="post">
+    <p>ID: @Model?.Beer?.Id</p>
+    <label for="Color">Цвет</label>
+    <input asp-for="Beer.Color" type="text" id="Color" name="Color"><span asp-validation-for="Beer.Color"></span>
+    <h1></h1>
+    <label for="Structure">Процент алкоголя</label>
+    <input asp-for="Beer.Structure" type="text" id="Structure" name="Structure"><span asp-validation-for="Beer.Structure"></span>
+    <h1></h1>
+    <label for="Volume">Объём</label>
+    <input asp-for="Beer.Volume" type="text" id="Volume" name="Volume"><span asp-validation-for="Beer.Volume"></span>
+    <button type="submit">Сохранить</button>
+</form>
